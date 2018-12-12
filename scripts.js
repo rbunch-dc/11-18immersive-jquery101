@@ -35,6 +35,73 @@ $('#show').click(function(){
 $('#toggle').click(function(){
     $('#thing').toggle()
 })
+$('#html').click(function(){
+    // document.querySelector('#thing').innerHTML = "<p></p>"
+    $('#thing').html("<p>New Html here</p>")
+})
+
+$('#text').click(function(){
+    $('#thing').text("<p>Change the text!</p>")
+})
+
+$('#css').click(function(){
+    // .css takes a JS Object...
+    // key is a string for any css property
+    // value is want you to apply
+    $('#thing').css({
+        "background-color": "green",
+        "border-radius": "50%",
+        "font-size": "100px"
+    })
+    // document.getElementById('thing').style.backgroundColor = "Green"
+    // document.getElementById('thing').style.borderRadius = "50%"
+    // document.getElementById('thing').style.fontSize = "100px"
+})
+$('#add-class').click(function(){
+    $('#thing').addClass('btn-danger')
+})
+
+$('#toggle-class').click(function(){
+    $('#thing').toggleClass('btn-danger')
+})
+
+$('#prepend').click(function(){
+    $('#thing').prepend('Some prepended text')
+})
+
+$('#append').click(function(){
+    $('#thing').append('Some appended text')
+})
+// fadeToggle works the same as toggle, but it adds
+// an aniamted fade
+$('#fade-out').click(function(){
+    $('#thing').fadeToggle(1500)
+})
+
+$('#slide').click(function(){
+    $('#thing').slideToggle(1500)
+})
+
+$('#animate').click(function(){
+    $('#thing').animate({
+        'background-color': 'red',
+        'height': '200px',
+        'margin-left': '100px',
+    },3000)
+})
+
+$('#goodbye').click(function(){
+    $('#thing').animate({
+        'margin-left': '10000px',
+    },500)
+})
+
+$('#hello').click(function(){
+    $('#thing').animate({
+        'margin-left': '0px',
+    },500)
+})
+
 
 // Native JS way
 // document.getElementById('hide').addEventListener('click',function(){
